@@ -21,32 +21,3 @@ defmodule AmiltonBot.Commands do
     Voice.leave(id)
   end
 end
-
-# Cogs.def ping do
-#   {:ok, g_id} = Cogs.guild_id()
-#   {:ok, fuck} = Client.get_channels(g_id)
-#   IO.inspect(fuck)
-# end
-
-# Cogs.def play(url) do
-#   {:ok, id} = Cogs.guild_id()
-#   {:ok, %Guild{voice_states: voice_states}} = Cogs.guild()
-#   {:ok, %GuildMember{user: %User{id: user_id}}} = Cogs.member()
-
-#   channel_id =
-#     Enum.map(voice_states, fn %VoiceState{user_id: u_id, channel_id: c_id} ->
-#       cond do
-#         u_id == user_id ->
-#           c_id
-
-#         true ->
-#           nil
-#       end
-#     end)
-#     |> Enum.filter(fn x -> x != nil end)
-#     |> List.first()
-
-#   Voice.join(id, channel_id)
-#   Voice.play_url(id, url)
-#   Cogs.say("Now playing #{url}")
-# end
